@@ -1,0 +1,41 @@
+
+
+
+
+
+
+
+
+
+
+
+
+.nav{
+    background:rgba(0,0,0,0.6);
+    border-bottom: 1px solid #fff;
+    .nav__logo{
+        color: #fff;
+    }
+
+}
+
+
+.nav__ul li a{
+    color: #fff;
+    &:hover{
+        background:rgba(0,0,0,0.7);
+        border-radius: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+.front{
+    background-image:linear-gradient(rgba(0,0,0,0.7), #00020593 ) ,url(../images/fondo.jpg);
+    background-size: cover;
+}
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+@import "colors";
+@import "typography";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 3rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 0;
+
+
+    .nav__logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav__ul{
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+            li a{
+                text-decoration: none;
+            }
+    }
+}
+
+.front{
+    margin-top: 161px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:20rem 6rem ;
+}
+
+
+

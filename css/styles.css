@@ -1,0 +1,59 @@
+.nav {
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid #fff; }
+  .nav .nav__logo {
+    color: #fff; }
+
+.nav__ul li a {
+  color: #fff; }
+  .nav__ul li a:hover {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem; }
+
+.front {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), #00020593), url(../images/fondo.jpg);
+  background-size: cover; }
+
+body {
+  font-family: 'Playfair Display', serif; }
+
+.nav__logo {
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.nav__ul li a {
+  font-size: 1rem;
+  font-weight: bold; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 3rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 0; }
+  .nav .nav__logo {
+    display: flex;
+    justify-content: center; }
+  .nav .nav__ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .nav .nav__ul li a {
+      text-decoration: none; }
+
+.front {
+  margin-top: 161px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20rem 6rem; }
