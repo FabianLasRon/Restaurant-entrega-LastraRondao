@@ -1,7 +1,13 @@
 
 
+$primary-color:rgb(0, 0, 0);
+$secondary-color:rgb(228, 13, 13);
+$text-color:#fff;
 
 
+body{
+    background-color: $primary-color
+}
 
 
 
@@ -14,7 +20,7 @@
     background:rgba(0,0,0,0.6);
     border-bottom: 1px solid #fff;
     .nav__logo{
-        color: #fff;
+        color: $text-color;
     }
 
 }
@@ -23,7 +29,7 @@
 .nav__ul li a{
     color: #fff;
     &:hover{
-        background:rgba(0,0,0,0.7);
+        background:rgba(228, 13, 13, 0.7);
         border-radius: 1rem;
         padding: 0.5rem 1rem;
     }
@@ -32,10 +38,43 @@
 .front{
     background-image:linear-gradient(rgba(0,0,0,0.7), #00020593 ) ,url(../images/fondo.jpg);
     background-size: cover;
+    .animate__animated{
+        color: rgb(185, 179, 179);
+    }
+    
+}
+
+.content1,.contentMid,.contentFinal{
+    color: $text-color;
+}
+
+.content1 h2,.contentMid h2,.contentFinal h2{
+    color: $secondary-color;
 }
 
 
+.footer{
+    background-color: $secondary-color;
+
+    .fa-brands{
+        color: $primary-color;
+        &:hover{
+            color:$text-color;
+        }
+    }
 
 
+}
+
+@media (min-width:1024px){
+
+    .nav__ul li a{
+        
+        &:hover{
+            
+            padding: 1.5rem 1rem;
+        }
+    }
 
 
+}

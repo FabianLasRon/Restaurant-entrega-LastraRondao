@@ -17,3 +17,108 @@ body{
     font-weight: bold;
 }
 
+.front__back__text{
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+
+    .animate__animated{
+        font-size: 1rem;
+    }
+}
+
+.content1 h2,.contentMid h2,.contentFinal h2{
+   text-transform: uppercase;
+   font-style: italic;
+}
+
+
+
+.contentMid__1,.contentMid__2,.contentMid__3,.contentFinal{
+    text-align: justify;
+}
+
+.contentFinal__1 h2{
+    text-align: center;
+}
+
+
+.contentFinal__1 p{
+    word-spacing: 2px;
+}
+
+
+
+
+
+
+
+.footer{
+    .footer__redes{
+
+        p{
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+        }
+        .fa-brands{
+            font-size: 80px;
+        }
+
+    }
+
+}
+
+
+@media (min-width:640px){
+    .front{
+        .front__back__text{
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .animate__animated{
+            font-size: 1.5rem;
+        }
+    }
+
+}
+
+@media (min-width:1024px){
+
+    .nav{
+        
+        .nav__logo{
+            font-size: 2.5rem;
+        }
+
+        .nav__ul li a{
+            font-size: 1.9rem;
+        }
+
+
+    }
+
+
+    .front{
+        .front__back__text{
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        .animate__animated{
+            font-size: 2.8rem;
+        }
+    }
+
+    .contentFinal__1{
+        .contentFinal__1__text{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+
+}
+
+
