@@ -15,6 +15,45 @@
 
 
 
+@mixin  tituloCont {
+    h2{
+        margin: 0.8rem auto;
+        margin-top: 6rem;
+        max-width: 800px;
+        position: relative;
+    }
+    h2:before{
+        content: "";
+        display: block;
+        width: 80%;
+        height: 2px;
+        position: absolute;
+        background: $secondary-color;
+        left: 0;
+        top: 50%;
+        z-index: -2;
+    }
+    h2::after{
+        content: "";
+        display: block;
+        width: 80%;
+        height: 2px;
+        position: absolute;
+        background: $secondary-color;
+        right: 0;
+        top: 50%;
+        z-index: -2;
+    }
+
+    span{
+        background:$primary-color;
+        padding: 0 1rem;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+}
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -23,45 +62,45 @@
 
 
 /**********************************HEADER******************************/
-.nav{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 5rem 3rem;
-    position: fixed;
-    top: 0;
+
+
+nav{
+    
     width: 100%;
     padding: 1rem 0;
-    
-
+    height: 15rem;
+    position: sticky;
+    top: 200px;
 
     .nav__logo{
-        display: flex;
-        justify-content: center;
+    text-align: center;
     }
 
     .nav__ul{
-        display: flex;
-        justify-content: space-evenly;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-            li a{
+        margin-top: 6px;
+        text-align: center;
+        
+        li{
+            padding-top: 0.8rem;
+            text-transform: uppercase;
+            a{
                 text-decoration: none;
             }
+        }
     }
+
+
 }
 
 
-
-
-/************************************MENU*******************************/
+/************************************MAIN***************//***************INDEX*****************/
 .front{
-    margin-top: 140px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows:auto ;
     height: 70vh;
-    
+
+
     .front__back,.front__back__text,.animate__animated{
         display: grid;
         justify-content: center;
@@ -94,9 +133,7 @@
 
 
     .content1_1,.content1_2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexCenter();
         padding-top: 30px;
 
 
@@ -157,6 +194,7 @@
 .contentFinal{
     display: grid;
     grid-template-columns: 1fr;
+    padding: 0px 30px;
     
 
     .contentFinal__1__img{
@@ -168,7 +206,7 @@
         @include flexCenter;
     }
 
-    padding: 0px 30px;
+    
     padding-bottom: 200px;
 
     hr{
@@ -182,28 +220,350 @@
 
 
 /*******************************FOOTER*****************************************************************/
-footer{
-    display: grid;
-    grid-template-columns:1fr;
-    grid-template-rows: 10rem 2rem;
 
-    .footer__redes{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+.footer{
+    padding: 2rem 0;
+
+    .footer__social{
+        
+        padding: 25px;
+        
+        a{
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            border-radius: 50%;
+            margin:0 8px;
+            opacity: 0.75;
+                &:hover{
+                opacity: 0.9;
+                }
+        }
+    }
+
+
+    ul{
+        li{
+            display: inline-block;
+            padding: 0 15px;
+        }
+        
+        margin-top: 0;
+        padding: 0;
+        list-style: none;
+        margin-bottom: 0;
+            a{
+            opacity: 0.8;
+            
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+
+
+    .copyright{
+        margin-top: 1rem;
+    }
+
+
+}
+
+
+
+
+
+
+
+/*************************************MAIN*************************//**************MENU******************/
+
+.front_menu{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.front_logo{
+    @include flexCenter();
+    margin: 3rem 0;
+
+    img{
+        border-radius: 50%;
+        width: 8rem;
+    }
+}
+
+
+.menu_section{
+    @include tituloCont();
+
+}
+
+
+
+
+/*******************************MAIN*******************************//*************RESERVA*************/
+
+
+.logoReser{
+    @extend .front_logo;
+}
+
+
+
+
+.reservaCont{
+    height: 100vh;
+    @include flexCenter();
+    justify-content: center;
+    
+    
+    
+
+    .neon{
+        margin-bottom: 10rem;
+        .neon-button{
+                display: inline-block;
+                cursor: pointer;
+                padding: 0.25em 1em;
+                border-radius: 0.25em;
+                box-shadow:inset 0 0 1em 0 $secondary-color,
+                0 0 1em 0 $secondary-color;
+                position: relative;
+        }
+
+        .neon-button::before{
+            pointer-events: none;
+            content: "";
+            position: absolute;
+            top:120%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            transform: perspective(3em) rotateX(40deg) scale(1,0.6);
+            filter: blur(1.5em);
+            opacity: 0.7;
+        }
+        .neon-button::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+        }
+        .neon-button:hover::after{
+            opacity: 1;
+        }
+    }
+}
+
+/*******************************MAIN*******************************//*************SOBRE NOSOTROS*************/
+
+.front_nosotros{
+    height: 36vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .front__nosotros__logo{
+
+        img{
+            border-radius: 50%;
+            
+        }
+    }
+}
+
+
+.nosotros_title{
+    h1{
+        margin-top: 2rem;
+    }
+}
+
+
+.nosotros_cont1{
+    margin: 1rem 2rem;
+    hr{
+        width: 100%;
+    }
+
+    p{
+        padding: 1rem 0;
+    }
+}
+
+.nosotros_cont2{
+    @extend .nosotros_cont1;
+    margin-top: 4rem;
+    img{
+        border-radius: 4%;
+        border: 2px solid $text-color;
     }
 
 }
 
+.nosotros_cont3{
+    margin: 2rem 2rem;
+    .nosotros_cont3__title{
+        @include tituloCont();
+        
+        
+    }
+
+    .nosotros_cont3__cont{
+        p{
+            padding-top: 1rem;
+        }
+        img{
+            margin-top: 2rem;
+            border-radius: 4%;
+            border:2px solid $text-color;
+        }
+    }
+}
+
+
+
+.nosotros_cont4{
+    margin-bottom: 4rem;
+
+    .nosotros_cont4__title{
+        @include tituloCont();
+    }
+    
+    img{
+            max-height: 136px;
+            margin-top: 2rem;
+            border-radius: 4%;
+            border:2px solid $text-color;
+    }
+    
+
+    .nosotros_cont4__title__img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
+
+
+
+
+
+/****************************************CONTACTO*******************************************************/
+
+
+.contact-form{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7), #00020593 ) ,url(../images/fondo2.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form{
+        width: 90%;
+        max-width: 600px;
+        .input-group{
+            margin-bottom: 2rem;
+            position: relative;
+            label{
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                padding: 10px;
+                color: #fff;
+                cursor: text;
+                transition: 0.2s;
+            }
+            input,textarea{
+                width: 100%;
+                padding: 10px;
+                outline: 0;
+                border: 1px solid #fff;
+                color:#fff;
+                background: transparent;
+                font-size: 1rem;
+            }
+            input:focus~label,
+            input:valid~label,
+            textarea:focus~label,
+            textarea:valid~label{
+                top:-35px;
+                font-size: 14px;
+            }
+
+        }
+        button{
+            padding: 10px 0;
+            color: #fff;
+            outline: none;
+            background: transparent;
+            border:1px solid #fff ;
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**************************************MEDIA QUERIES*************************************************/
 
+
 @media (min-width:640px){
+
+    
+    nav{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 4rem 4rem;
+        align-items: flex-start;
+        height: 9rem;
+        
+        
+        .nav__logo{
+            grid-column: 1/-1;
+            
+        }
+        .nav__ul{
+            grid-row: 2/3;
+            display: flex;
+            grid-column: 1/-1;
+            justify-content: space-around;
+        }
+    }
+        
+
+
 
     .front{
         display: grid;
         grid-template-columns:repeat(12,1fr);
         grid-template-rows: repeat(6,1fr);
         height: 70vh;
+        padding-top: 30px;
 
     .front__back__text{
         grid-column: 7/span 6;
@@ -214,8 +574,8 @@ footer{
 
 
     .front__back{
-        grid-column:3/7;
-        grid-row: 3/5;
+        grid-column:1/7;
+        grid-row: 3/6;
         img{
             width: 16rem;
         }
@@ -272,6 +632,41 @@ footer{
 
     }
 
+    .front_logo img{
+    width: 200px;
+    }
+
+    /************NOSOTROS**************/
+    
+    .nosotros_cont2{
+        @include flexCenter();
+        img{
+            width: 500px;
+        }
+    }
+
+    .nosotros_cont3{
+        .nosotros_cont3__cont{
+            padding-top: 3rem;
+            img{
+                width: 350px;
+                float: left;
+                margin: 1rem;
+            }
+            
+        }
+    }
+
+    .nosotros_cont4{
+        .nosotros_cont4__title__img{
+            
+            img{
+                width: 400px;
+                max-height: 500px;
+            }
+        }
+    }
+
 
 
 
@@ -279,21 +674,59 @@ footer{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width:1024px){
 
     .nav{
         display: grid;
-        grid-template-columns: repeat(12,1fr);
-        align-items: end;
+        grid-template-columns: 20rem auto;
+        grid-template-rows: 8rem;
+        align-items: center;
         
         .nav__logo{
-            grid-column: 1/span 4;
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+            
+        .nav__ul{
+            grid-column: 2/-1;
+            grid-row: 1/2;
+            display: flex;
+            justify-content: end;
+            padding: 0 2rem;
+            
+            a{
+                padding: 0 1rem;
+                
+                
+            }
         }
 
-        .nav__ul{
-            grid-column: 6/-1;
-        }
     }
+
+
+
 
     .front{
         
@@ -358,12 +791,83 @@ footer{
     }
     
 
-    
+
+    /**********NOSOTROS************/
+
+
+    .nosotros_cont1{
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 1fr 0.5fr 2px;
+        p{
+            grid-column: 4/span 6;
+        }
+
+        hr{
+            grid-row: 3/4;
+            grid-column: 4/span 6;
+        }
+        
+    }
+
+
+    .nosotros_cont2{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        img{
+            width: 540px;
+            margin-left: 50px;
+        }
+        p{
+            width: 500px;
+            padding: 0 20px;
+            padding: 32px 0;
+        }
+    }
+
+
+    .nosotros_cont3__cont{
+        
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        p{
+            align-self: center;
+        }
+    }
+
+
+    .nosotros_cont3{
+        .nosotros_cont3__cont{
+            
+            img{
+                width: 500px;
+            }
+            
+        }
+    }
+
+    .nosotros_cont4{
+        .nosotros_cont4__title__img{
+
+            img{
+                margin: 4rem 0;
+                width: 900px;
+                max-height: 900px;
+            }
+        }
+    }
+
+
+
+
+
 
 
 }
     
-
 
 
 

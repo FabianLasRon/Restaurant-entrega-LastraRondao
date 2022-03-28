@@ -19,49 +19,55 @@
 <body>
 
 
-    <!-----------------------------HEADER-------------------------------->>
+    <!-----------------------------HEADER-------------------------------->
+    
+    
     <header>
         <nav class="nav">
             <div class="nav__logo">Heaven´s Food</div>
             <ul class="nav__ul">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Sobre Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="./pages/menu.html">Menu</a></li>
+                <li><a href="./pages/reserva.html">Reservar</a></li>
+                <li><a href="./pages/sobreNostros.html">Sobre Nosotros</a></li>
+                <li><a href="./">Contacto</a></li>
             </ul>
         </nav>
     </header>
+    
 
 
     <!--------------------------------------------MAIN------------------------------------------------->
+    
     <main>
-            <section class="front">
-                <div class="front__back">
-                    <img src="./images/logo.png" class="front__img" alt="logo Heaven´s food" width="200px">
-                </div>
-                <div class="front__back__text">
-                    <h1>Heaven´s food</h1> 
-                    <p class="animate__animated animate__headShake animate__infinite	infinite animate__slow">Una experiencia inolvidable</p>                
-                </div>   
-            </section>
+        <section class="front">
+            <div class="front__back">
+                <img src="./images/logo.png" class="front__img" alt="logo Heaven´s food" width="200px">
+            </div>
+            <div class="front__back__text">
+                <h1>Heaven´s food</h1> 
+                <p class="animate__animated animate__headShake animate__infinite	infinite animate__slow">Una experiencia inolvidable</p>                
+            </div>   
+        </section>
         
-
+        
 
         <section class="content1">
 
             <div class="content1_1">
-                <img src="./images/comida.jpg" alt="comida 1" width="200px" class="content_1__img">
+                <img src="./images/comida.jpg" alt="comida 1-plato" width="200px" class="content_1__img">
                 <h2>El Mejor Bar</h2><hr>
                 <p class="content1_1__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur 
                     magnam nulla facilis quod vitae ullam! Doloribus dolor, consequatur ex possimus modi, 
-                    aut maxime, magni sapiente dolores eius consectetur ullam voluptatem?</p>
+                    aut maxime, magni sapiente dolores eius consectetur ullam voluptatem?
+                </p>
             </div>
 
 
 
 
             <div class="content1_2">
-                <img src="./images/comida2.jpg" alt="comida 2" width="200px" class="content1_2__img">
+                <img src="./images/comida2.jpg" alt="comida 2-plato" width="200px" class="content1_2__img">
                 <h2>La perfecta salida</h2><hr>
                 <p class="content1_2__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur 
                     magnam nulla facilis quod vitae ullam! Doloribus dolor, consequatur ex possimus modi, 
@@ -69,7 +75,7 @@
             </div>
 
         </section>
-
+       
 
         <section class="contentMid">
             <div class="contentMid__1">
@@ -80,10 +86,6 @@
                     temollitia esse sunt ipsam maxime distinctio enim 
                     dolores assumenda excepturi dolorem ab consectetur!</p>
             </div>
-
-
-
-
 
             <div class="contentMid__2">
                 <img src="./images/delivery.jpg" width="200px" height="200px" alt="delivery">
@@ -105,9 +107,10 @@
 
 
 
+
         <section class="contentFinal">
             <div class="contentFinal__1">
-                <img src="./images/comida3.jpg" alt="comida 3" width="300px" class="contentFinal__1__img" >
+                <img src="./images/comida3.jpg" alt="comida 3-plato" width="260px" class="contentFinal__1__img" >
                 <div class="contentFinal__1__text"><h2> Los platos mas deliciosos del continente</h2><hr>
                 <p>El chef italiano Fulanito Cosmo, dueño de Pata apetosa Ristorante, da vida a preparaciones que combinan tradición y modernidad en base a materias primas de primera línea. Su carta se compone de antipasti típicos, preparaciones de mar y tierra, risottos y, por supuesto, auténticas pastas frescas.
 
@@ -123,19 +126,32 @@
 
 <!---------------------------------------------FOOTER-------------------------------------------------------->
 
-    <footer class="footer">
-    
-        <div class="footer__redes">
-            <p>Seguinos!</p>
-            <a href="#"><i class="fa-brands fa-instagram-square"></a></i>
-            <a href="#"><i class="fa-brands fa-facebook"></i>
-            <a href="#"><i class="fa-brands fa-twitter-square"></i>
-        </div>
-        <div class="footer__text">
-            <h4>Fabian Lastra Rondao</h4>
-        </div>
+<footer class="footer">
 
-    </footer>
+    <div class="footer__social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-snapchat"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+    <ul class="footer__list">
+        <li>
+            <a href="./index.html">Home</a>
+        </li>
+        <li>
+            <a href="#">Terms</a>
+        </li>
+        <li>
+            <a href="#">Privacy policy</a>
+        </li>
+    </ul>
+    
+    <p class="copyright">
+        Fabian Lastra Rondao 2022
+    </p>
+
+
+</footer>
     
 
 
